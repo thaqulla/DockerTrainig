@@ -1,0 +1,11 @@
+#!/bin/bash
+git add .
+echo "git add ."
+
+yyyyMMdd=$(date +%Y%m%d)
+hhmm=$(date +%H%M)
+git commit -m "${yyyyMMdd}${hhmm}"
+echo "git commit -m \"${yyyyMMdd}${hhmm}\""
+
+git push -u origin main
+echo "git push -u origin main"

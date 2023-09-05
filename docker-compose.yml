@@ -33,26 +33,13 @@ services:
     ports:
       - "3306:3306"
     environment:
+      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: training
-      MYSQL_USER: trainingUser
-      MYSQL_PASSWORD: testpassword@
-      MYSQL_ROOT_PASSWORD: testpassword@
+      MYSQL_USER: user
+      MYSQL_PASSWORD: hoge
       TZ: 'Asia/Tokyo'
     volumes:
       - mysql-volume:/var/lib/mysql
 
 volumes:
   mysql-volume:
-
-#   mysql:
-#     build: "./.docker/mysql"
-#     ports:
-#     - "3306:3306"
-#     volumes:
-#     - "./storage/mysql:/var/lib/mysql"
-#     environment:
-#     MYSQL_DATABASE: sumune
-#     MYSQL_USER: root
-#     MYSQL_PASSWORD: rootroot
-#     MYSQL_ROOT_PASSWORD: rootroot
-#     container_name: sumune-mysql
