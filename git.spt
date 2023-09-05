@@ -1,4 +1,5 @@
 #!/bin/bash
+# Run the following command to execute the script: ./git.spt
 git add .
 echo "git add ."
 
