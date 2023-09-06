@@ -10,3 +10,7 @@ echo "git commit -m \"${yyyyMMdd}${hhmm}\""
 
 git push -u origin main
 echo "git push -u origin main"
+
+cd ../
+cp -r arsaga arsaga_copy
+cd arsaga
