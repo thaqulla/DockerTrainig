@@ -15,23 +15,16 @@
       // 配列に値を代入する
       $user_names = ['侍太郎', '侍一郎', '侍二郎', '侍三郎', '侍四郎'];
       // 配列の値を出力する
-      print_r($user_names);
+      
       // 改行する
       echo '<br>';
-
-      // 2番目の要素を更新する
-      $user_names[1] = '侍花子';
-
-      // 末尾に要素を追加する
-      $user_names[] = '侍五郎';
-
-      // 配列の値を出力する
-      print_r($user_names);
-
+      $user_names[1] = '侍花子'; // 2番目の要素を更新する
+      $user_names[] = '侍五郎'; // 末尾に要素を追加する
       echo '<br>';
-      // 1～10までの整数を順番に出力するじ
+      print_r($user_names);
+      echo '<br>';
       for ($i = 1; $i <= 10; $i++) {
-        echo $i . '<br>';
+        echo $i . '<br>'; // 1～10までの整数を順番に出力する
       }
 
       function setString(string $str): void {
@@ -43,32 +36,39 @@
       $value = '0101';
       setString($value);
       // setInt($value);
-      function show_user_name() {
-        // ローカル変数を定義する
-        $user_name = '侍太郎';
-
-        // ローカルスコープの範囲内でローカル変数を使う
-        echo $user_name . '<br>';
+      class Product { // クラスを定義する
+        public $name; // プロパティを定義する
+        public function set_name(string $name) {
+          $this->name = $name;
+        }
+        public function show_name() {
+          echo $this->name . '<br>';
+        }
       }
 
-      show_user_name();
-
-      // ローカルスコープの範囲外でローカル変数を使う（エラーが発生する）
-      echo $user_name;
-      // クラスを定義する
-      class Product {
-        // プロパティを定義する
-        public $name;
+      $coffee = new Product();
+      $coffee->set_name('COFFEE');
+      $coffee->show_name();
+      
+      $shampoo = new Product(); // インスタンス化する
+      $shampoo->name = 'シャンプー'; // プロパティにアクセスし、値を代入する
+      echo $shampoo->name . '<br>'; // プロパティにアクセスし、値を出力する
+      class User { // クラスを定義する
+        private $name; // プロパティを定義する 
+        private $age;
+        private $gender;
+        
+        public function __construct(string $name, int $age, string $gender) { // コンストラクタを定義する
+          $this->name = $name;
+          $this->age = $age;
+          $this->gender = $gender;
         }
+      }
+      
+      $user = new User('侍太郎', 36, '男性'); // インスタンス化する
 
-        // インスタンス化する
-        $shampoo = new Product();
+      print_r($user); // インスタンス$userの各プロパティの値を出力する
 
-        // プロパティにアクセスし、値を代入する
-        $shampoo->name = 'シャンプー';
-
-        // プロパティにアクセスし、値を出力する
-        echo $shampoo->name;
       ?>
     </p>
   </body>
