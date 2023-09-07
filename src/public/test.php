@@ -82,7 +82,6 @@
         '九州地方'
       ];
 
-      
       print_r(SEVEN_REGIONS); // 定数（配列）の中身を出力する
       echo '<br>';
 
@@ -92,7 +91,22 @@
 
       echo strtotime('+1 week') . '<br>'; // 現在を基準として1週間後の日時のUNIXタイムスタンプを出力する
 
-      echo date('Y/m/d H:i:s', strtotime('-3 year')); // 現在を基準として3年前の日時を指定したフォーマットで出力する
+      echo date('Y/m/d H:i:s', strtotime('-3 year')) . '<br>'; // 現在を基準として3年前の日時を指定したフォーマットで出力する
+
+      $date_time = new DateTime('2015-03-10 12:15:29');
+
+      echo $date_time->format('Y年n月j日H時i分s秒') . '<br>';
+
+      $big_dice = mt_rand(100000,999999); //乱数生成
+
+      echo $big_dice . '<br>';
+
+      $omikuji = ['大吉','小吉','凶'];
+      $key = array_rand($omikuji,1);
+      $result = $omikuji[$key];
+
+      echo $result . '<br>';
+
       ?>
     </p>
   </body>

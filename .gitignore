@@ -1,1 +1,6 @@
 .spt
+/public/js
+/public/css
+/vender
+.env
+/old
