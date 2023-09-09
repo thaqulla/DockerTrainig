@@ -4,3 +4,6 @@
 /vender
 .env
 /old
+/node_modules
+/bootstrap
+/config
