@@ -7,7 +7,8 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "mix --production",
+        "build": "npm run production"
     },
     "devDependencies": {
         "@popperjs/core": "^2.10.2",
@@ -22,5 +23,8 @@
         "vue": "^3.3.4",
         "vue-loader": "^16.8.3",
         "vue-template-compiler": "^2.6.12"
+    },
+    "dependencies": {
+        "bootstrap-vue": "^2.23.1"
     }
 }

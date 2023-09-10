@@ -1,5 +1,7 @@
 require("./bootstrap");
 import '../sass/app.scss'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // window.Vue = require('vue').default;
 
