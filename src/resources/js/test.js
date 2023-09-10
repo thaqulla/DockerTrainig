@@ -4,4 +4,4 @@ Vue.createApp({
       message: 'みなさんこんにちは！'
     };
   }
-}).mount('#app');
+}).mount('#app2');

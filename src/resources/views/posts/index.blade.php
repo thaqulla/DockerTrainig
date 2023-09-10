@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>投稿一覧</title>
 </head>
-<script src="../../js/test.ls"></script>
-<script src="../../js/lib/vue.global.ls"></script>
+<!-- <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{ asset('js/test.js') }}"></script>
+<script src="{{ asset('js/lib/vue.global.js') }})"></script> -->
 <body>
     <header>
         <nav>
@@ -21,7 +22,7 @@
         <article>
             <div>                
                 <h1>投稿一覧</h1>    
-                <div id="app">
+                <div id="app2">
                     <p v-text="message"></p>   
                 </div>  
                 @if (session('flash_message'))
@@ -41,6 +42,11 @@
                             <div>
                                 <a href="{{ route('posts.show', $post) }}">詳細</a>   
                                 <a href="{{ route('posts.edit', $post) }}">編集</a>
+                                <form action="{{ route('posts.destroy', $post) }}" method="post">
+                                    @csrf
+                                    @method('delete')                                        
+                                    <button type="submit">削除</button>
+                                </form>
                             </div>                             
                             </div>
                         </div>
@@ -56,6 +62,7 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@3.3.4/dist/vue.global.js"></script> -->
     
 </body>
-<script src="../../js/test.ls"></script>
-<script src="../../js/lib/vue.global.ls"></script>
+<script src="js/app.js"></script>
+<!-- <script src="{{ asset('js/app.js') }}"></script> -->
+<!-- <script src="../../js/lib/vue.global.ls"></script> -->
 </html>

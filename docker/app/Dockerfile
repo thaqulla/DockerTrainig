@@ -39,3 +39,8 @@ RUN curl -sL https://deb.nodesource.com/setup_14.x | bash - \
   && apt-get install -y nodejs
 
 ENV TZ Asia/Tokyo
+
+# # Localize error messages to Japanese in Laravel 8.x. Please execute it in the 'src' directory.
+# php -r "copy('https://readouble.com/laravel/8.x/ja/install-ja-lang-files.php', 'install-ja-lang.php');" \
+# php -f install-ja-lang.php \
+# php -r "unlink('install-ja-lang.php');"

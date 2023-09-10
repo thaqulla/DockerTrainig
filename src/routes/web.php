@@ -40,10 +40,12 @@ Route::resource('posts', PostController::class);と記述した場合、Postコ�
 // Route::HTTPリクエストメソッド名('URL', [コントローラ名::class, 'アクション名'])->name(基準となるURL.アクション名);
 // Route::get('/posts', [PostController::class, 'index'])->name('posts.index');nameは自由に決めていいが上記のようなルールが一般的
 
-Route::get('/', function () {
+Route::get('/vue_check', function () {
     return view('welcome');
 });
 
+Route::get('/',[PostController::class, 'index']);
+/*
 // 投稿の一覧ページ
 Route::get('/posts', [PostController::class, 'index'])->name('posts.index');
 // 投稿の作成ページ
@@ -56,6 +58,11 @@ Route::get('/posts/{post}', [PostController::class, 'show'])->name('posts.show')
 Route::get('/posts/{post}/edit', [PostController::class, 'edit'])->name('posts.edit');
 // 投稿の更新機能
 Route::patch('/posts/{post}', [PostController::class, 'update'])->name('posts.update');
+ // 投稿の削除機能
+Route::delete('/posts/{post}', [PostController::class, 'destroy'])->name('posts.destroy');
+*/
+//Route::resource('基準となるURL', コントローラ名::class)　で表のように自動設定される
+Route::resource('posts',PostController::class);
 
 // Auth::routes();
 

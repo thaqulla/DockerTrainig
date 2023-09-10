@@ -1,0 +1,4 @@
+cd src
+npm run dev
+#npm run watch
+cd ../
