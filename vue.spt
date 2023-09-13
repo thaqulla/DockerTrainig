@@ -1,5 +1,7 @@
 cd src
-npm install
+# npm cache clean --force
+# npm install
 npm run dev
-#npm run watch
+# npm run watch
+# それでもうまくいかない場合はChromeのキャッシュクリア実行
 cd ../

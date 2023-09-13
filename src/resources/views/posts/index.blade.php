@@ -19,7 +19,7 @@
     <p class="card-text">{{ $post->content }}</p>
 
     <div class="d-flex">
-      <a href="{{ route('posts.show', $post) }}" class="btn btn-outline-primary d-block me-1">詳細</a>
+      <a href="{{ route('posts.show', $post) }}" class="btn btn-outline-success d-block me-1">詳細</a>
       <a href="{{ route('posts.edit', $post) }}" class="btn btn-outline-primary d-block me-1">編集</a>
 
       <form action="{{ route('posts.destroy', $post) }}" method="post">

@@ -8,9 +8,17 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import { createApp } from "vue/dist/vue.esm-browser.js";
 import ExampleComponent from "./components/ExampleComponent.vue";
 import HelloComponent from "./components/Hello.vue";
+import TestComponent from "./components/Test.vue";
 createApp({
   components: {
     ExampleComponent,
   },
 }).mount("#app");
-createApp(HelloComponent).mount("#hello");
+createApp({
+  components: {
+    HelloComponent, 
+    TestComponent,
+  },
+}).mount("#hello");
+// createApp(HelloComponent).mount("#hello");
+// createApp(TestComponent).mount("#test");

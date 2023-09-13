@@ -4,7 +4,7 @@
       <div class="col-md-8">
         <div>{{ message }}</div>
         <div class="card">
-          <div class="card-header">Example Component</div>
+          <div class="card-header">Example Component Vue3 Used</div>
 
           <div class="card-body">
             I'm an example component.
@@ -16,17 +16,23 @@
 </template>
 
 <script>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 export default {
   setup() {
-    const message = ref('Hello Laravel Vue 3');
+    const message = ref('Hello Laravel Vue 3'); // リアクティブな変数の作成
 
+    onMounted(() => { // コンポーネントがマウントされたときに実行する処理
+      console.log('Component mounted.');
+    });
     return {
-      message,
+      message, // データと処理を返す
     };
   },
-  mounted() {
-    console.log('Component mounted.')
-  }
-}
+};
 </script>
+
+
+
+
+
+
